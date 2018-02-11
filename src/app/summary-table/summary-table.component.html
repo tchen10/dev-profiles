@@ -1,0 +1,25 @@
+<p-table [value]="summaries">
+  <ng-template pTemplate="header" let-summaries>
+    <tr>
+      <th [pSortableColumn]="'field'">
+        Skill
+        <p-sortIcon [field]="'field'"></p-sortIcon>
+      </th>
+      <th>Want to Learn</th>
+      <th>Dabble</th>
+      <th>Good</th>
+      <th>Pretty Great</th>
+      <th>Ninja</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-summary>
+    <tr [pSelectableRow]="rowData">
+      <td>{{summary.field}}</td>
+      <td>{{summary.statFor("1")}}</td>
+      <td>{{summary.statFor("2")}}</td>
+      <td>{{summary.statFor("3")}}</td>
+      <td>{{summary.statFor("4")}}</td>
+      <td>{{summary.statFor("5")}}</td>
+    </tr>
+  </ng-template>
+</p-table>
