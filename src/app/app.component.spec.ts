@@ -23,10 +23,6 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should render title in a h1 tag', async(() => {
-    expect(element.querySelector('h1').textContent).toContain('Dev');
-  }));
-
   it('should have a router outlet', () => {
     expect(element.querySelector('router-outlet')).not.toBeNull();
   });

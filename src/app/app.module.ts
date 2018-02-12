@@ -12,13 +12,15 @@ import {TableModule} from 'primeng/table';
 import { SummaryChartComponent } from './summary-chart/summary-chart.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app-routing.module';
+import {TechRadarComponent} from './tech-radar/tech-radar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryTableComponent,
-    SummaryChartComponent
+    SummaryChartComponent,
+    TechRadarComponent
   ],
   imports: [
     BrowserModule,
