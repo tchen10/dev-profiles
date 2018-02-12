@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CSV_FILE="$1"
 echo "Parsing csv file to json"
-node_modules/csvtojson/bin/csvtojson --delimiter="," --flatKeys=true $CSV_FILE > src/assets/converted.json
+node_modules/csvtojson/bin/csvtojson --delimiter="," --flatKeys=true data/*-radar.csv > src/assets/converted-radar.json
+node_modules/csvtojson/bin/csvtojson --delimiter="," --flatKeys=true data/*-skill.csv > src/assets/converted-skill.json
 echo "Done"

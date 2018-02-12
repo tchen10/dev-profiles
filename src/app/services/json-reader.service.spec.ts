@@ -35,7 +35,7 @@ describe('JsonReaderService', () => {
       expect(summaries).toEqual(Summary.createFrom(json));
     });
 
-    const request = httpMock.expectOne('../assets/converted.json');
+    const request = httpMock.expectOne('../assets/converted-skill.json');
     expect(request.request.method).toBe('GET');
     request.flush(json);
   }));
