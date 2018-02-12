@@ -24,46 +24,4 @@ describe('Model: Summary', () => {
       ]);
     });
   });
-
-  describe('#createChartData', () => {
-    it('should create ChartData from Summaries', () => {
-      const summaries = [
-        new Summary('Golang', ['1', '1', '2']),
-        new Summary('Python', ['3', '4', '4'])
-      ];
-
-      const chartData = Summary.createChartData(summaries);
-
-      expect(chartData).toEqual({
-        datasets: [
-          {
-            label: 'Golang',
-            data: [
-              {
-                x: 1,
-                y: 2
-              },
-              {
-                x: 2,
-                y: 1
-              }
-            ]
-          },
-          {
-            label: 'Python',
-            data: [
-              {
-                x: 3,
-                y: 1
-              },
-              {
-                x: 4,
-                y: 2
-              }
-            ]
-          }
-        ]
-      });
-    });
-  });
 });
