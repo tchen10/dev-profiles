@@ -1,4 +1,5 @@
 import * as _ from 'lodash';
+import {ChartData} from './chart-data.model';
 
 export class Summary {
   field: string;
@@ -43,15 +44,6 @@ export class Summary {
     this.field = field;
     this.values = values;
     this.stats = _.groupBy(this.values, Math.floor);
-  }
-
-  get totalEntries(): number {
-    return this.values.length;
-  }
-
-  statFor(stat: string): string {
-    const values = this.stats[stat];
-    return values ? `${values.length} (${_.round(values.length / this.totalEntries * 100)}%)` : `0`;
   }
 
   addValue(value: string): void {

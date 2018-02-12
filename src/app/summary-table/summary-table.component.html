@@ -1,25 +1,23 @@
-<p-table [value]="summaries">
-  <ng-template pTemplate="header" let-summaries>
+<p-table #dt [columns]="cols" [value]="summaries">
+  <ng-template pTemplate="caption">
+    <div style="text-align: left">
+      <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+      <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
     <tr>
-      <th [pSortableColumn]="'field'">
-        Skill
-        <p-sortIcon [field]="'field'"></p-sortIcon>
+      <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+        {{col.header}}
+        <p-sortIcon [field]="col.field"></p-sortIcon>
       </th>
-      <th>Want to Learn</th>
-      <th>Dabble</th>
-      <th>Good</th>
-      <th>Pretty Great</th>
-      <th>Ninja</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-rowData let-summary>
-    <tr [pSelectableRow]="rowData">
-      <td>{{summary.field}}</td>
-      <td>{{summary.statFor("1")}}</td>
-      <td>{{summary.statFor("2")}}</td>
-      <td>{{summary.statFor("3")}}</td>
-      <td>{{summary.statFor("4")}}</td>
-      <td>{{summary.statFor("5")}}</td>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        {{rowData[col.field]}}
+      </td>
     </tr>
   </ng-template>
 </p-table>

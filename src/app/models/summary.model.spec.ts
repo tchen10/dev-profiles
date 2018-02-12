@@ -66,25 +66,4 @@ describe('Model: Summary', () => {
       });
     });
   });
-
-  describe('.totalEntries', () => {
-    it('returns the count of values', () => {
-      const totalEntries = new Summary('Golang', ['1', '1', '1']).totalEntries;
-      expect(totalEntries).toEqual(3);
-    });
-  });
-
-  describe('.statFor', () => {
-    it('returns the formatted stat text for a given stat', () => {
-      const summary = new Summary('Golang', ['1', '1', '1', '2']);
-      const stat = summary.statFor('1');
-      expect(stat).toEqual('3 (75%)');
-    });
-
-    it('returns 0 if there are no values for a given stat', () => {
-      const summary = new Summary('Golang', ['1', '1', '1', '2']);
-      const stat = summary.statFor('3');
-      expect(stat).toEqual('0');
-    });
-  });
 });
