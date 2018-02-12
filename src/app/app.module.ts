@@ -10,6 +10,8 @@ import { SummaryTableComponent } from './summary-table/summary-table.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 import { SummaryChartComponent } from './summary-chart/summary-chart.component';
+import {RouterModule} from '@angular/router';
+import {appRoutes} from './app-routing.module';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { SummaryChartComponent } from './summary-chart/summary-chart.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     HttpClientModule,
     ChartModule,

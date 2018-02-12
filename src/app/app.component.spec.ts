@@ -12,7 +12,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MockComponent({
-          selector: 'app-summary-table'
+          selector: 'router-outlet'
         })
       ],
     }).compileComponents();
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     expect(element.querySelector('h1').textContent).toContain('Dev');
   }));
 
-  it('should have a summary table', () => {
-    expect(element.querySelector('app-summary-table')).not.toBeNull();
+  it('should have a router outlet', () => {
+    expect(element.querySelector('router-outlet')).not.toBeNull();
   });
 });
