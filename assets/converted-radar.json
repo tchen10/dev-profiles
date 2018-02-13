@@ -1,0 +1,15 @@
+[
+{"label":"Hyperledger Fabric","quadrant":"0","ring":"0","moved":"0","link":""},
+{"label":"Hyperledger Composer","quadrant":"0","ring":"1","moved":"0","link":""},
+{"label":"Docker","quadrant":"1","ring":"0","moved":"0"},
+{"label":"Golang","quadrant":"2","ring":"0","moved":"0"},
+{"label":"Angularjs","quadrant":"2","ring":"1","moved":"0"},
+{"label":"React/Redux","quadrant":"2","ring":"2","moved":"0"},
+{"label":"Angularjs","quadrant":"2","ring":"1","moved":"0","link":""},
+{"label":"Angular","quadrant":"2","ring":"1","moved":"0"},
+{"label":"Agile Methodology","quadrant":"3","ring":"1","moved":"0"},
+{"label":"Microservices","quadrant":"3","ring":"2","moved":"0"},
+{"label":"Continuous Integration","quadrant":"3","ring":"1","moved":"0"},
+{"label":"Test Driven Development","quadrant":"3","ring":"2","moved":"0"},
+{"label":"Pair Programming","quadrant":"3","ring":"2","moved":"0"}
+]
