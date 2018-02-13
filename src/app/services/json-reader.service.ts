@@ -3,11 +3,12 @@ import 'rxjs/add/operator/map';
 import {HttpClient} from '@angular/common/http';
 import {Summary} from '../models/summary';
 import {Observable} from 'rxjs/Observable';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class JsonReaderService {
-  private SKILL_FILEPATH = '../assets/converted-skill.json';
-  private RADAR_FILEPATH = '../assets/converted-radar.json';
+  private SKILL_FILEPATH = `${environment.pathToAssets}/converted-skill.json`;
+  private RADAR_FILEPATH = `${environment.pathToAssets}/converted-radar.json`;
 
   constructor(public http: HttpClient) {
   }
